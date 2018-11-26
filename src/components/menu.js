@@ -10,11 +10,8 @@ class Link extends React.Component{
 }
 
 class Menu extends React.Component{
-
     render(){
-
         let  menu = ['Home', 'About', 'Contacts', 'Our partners'];
-
         return (
             <nav>
                 <ul>
@@ -26,7 +23,6 @@ class Menu extends React.Component{
                 </ul>
             </nav>
         );
-
     }
 }
 export default Menu;
