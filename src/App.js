@@ -4,6 +4,7 @@ import Button from "./components/button";
 import Form from "./components/form";
 import Menu from "./components/menu";
 import Tooltip from "./components/tooltip";
+import Timer from "./components/timer";
 
 class App extends React.Component{
     render(){
@@ -11,6 +12,7 @@ class App extends React.Component{
             <div>
                 <Menu />
                 <Tooltip text='Ты на меня навел!'>Наведи на меня!</Tooltip>
+                <Timer />
             </div>
         )
     }
