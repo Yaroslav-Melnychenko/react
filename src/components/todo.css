@@ -1,0 +1,15 @@
+.main-input{
+    width: 88%;
+    margin-right: 2%;
+}
+
+.main-button{
+    width: 10%;
+}
+
+.custom-awasome-icon{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.action-false{color: #d0d0d0;}
