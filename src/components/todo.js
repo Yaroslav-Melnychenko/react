@@ -9,24 +9,29 @@ library.add(faCheckCircle, faTrashAlt);
 
 class Todo extends React.Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            tasks: [
-                {
-                    oneTask: 'I need to call my boss',
-                    doneTask: false
-                },
-                {
-                    oneTask: 'Find the best way to solve a task',
-                    doneTask: true
-                },
-                {
-                    oneTask: 'Be happy',
-                    doneTask: true
-                }
-            ]
-        };
+    state = {
+        task: [
+            {
+                done: false,
+                text: 'I need to call my boss'
+            },
+            {
+                done: true,
+                text: 'Go to post'
+            },
+            {
+                done: false,
+                text: 'Learn react'
+            }
+        ]
+    }
+
+    changeDone(done, i){
+        this.setState(state => {
+            state.task.map((value, j) => {
+
+            });
+        });
     }
 
     render(){
@@ -52,12 +57,16 @@ class Todo extends React.Component{
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td><FontAwesomeIcon icon="check-circle" className="custom-awasome-icon action-false" /></td>
-                                <td>I need to call my boss</td>
-                                <td><FontAwesomeIcon icon="trash-alt" className="custom-awasome-icon text-danger" /></td>
-                            </tr>
+                            {
+                                this.state.task.map((value, key) =>
+                                    <tr key={key}>
+                                        <th scope="row">{key}</th>
+                                        <td><FontAwesomeIcon onClick={this.changeDone.bind(this, value.done, key)} icon="check-circle" className={`custom-awasome-icon action-false done-${value.done}`} /></td>
+                                        <td>{value.text}</td>
+                                        <td><FontAwesomeIcon icon="trash-alt" className="custom-awasome-icon text-danger" /></td>
+                                    </tr>
+                                )
+                            }
                         </tbody>
                     </table>
                 </div>
