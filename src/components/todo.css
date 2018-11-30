@@ -2,16 +2,13 @@
     width: 88%;
     margin-right: 2%;
 }
-
 .main-button{
     width: 10%;
 }
-
 .custom-awasome-icon{
     font-size: 22px;
     cursor: pointer;
 }
-
-.action-false{color: #d0d0d0;}
-
+.action-false, .delete-false{color: #d0d0d0;}
 .done-true{color: #28a745;}
+.delete-true{color: #dc3545;}

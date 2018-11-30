@@ -5,8 +5,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import Menu from "./components/menu";
 // import Tooltip from "./components/tooltip";
 // import Timer from "./components/timer";
-// import Todo from "./components/todo";
-import Counter from "./components/counter";
+import Todo from "./components/todo";
+// import Counter from "./components/counter";
 
 class App extends React.Component{
     render(){
@@ -14,7 +14,7 @@ class App extends React.Component{
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-12">
-                        <Counter />
+                        <Todo />
                     </div>
                 </div>
             </div>
