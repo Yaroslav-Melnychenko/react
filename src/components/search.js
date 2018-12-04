@@ -19,7 +19,6 @@ class Search extends React.Component{
     }
 
     search(e){
-        this.setState(this.getInitialState());
         let searchText = e.target.value;
         let searched = [];
         this.state.games.map(function(value){
