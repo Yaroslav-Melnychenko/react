@@ -5,10 +5,10 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import Menu from "./components/menu";
 // import Tooltip from "./components/tooltip";
 // import Timer from "./components/timer";
-import Todo from "./components/todo";
-import Counter from "./components/counter";
-import Routing from "./components/routing";
-import Search from "./components/search";
+// import Todo from "./components/todo";
+// import Routing from "./components/routing";
+// import Search from "./components/search";
+import Counters from "./components/counters";
 
 class App extends React.Component{
     render(){
@@ -16,11 +16,7 @@ class App extends React.Component{
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-12">
-                        <Todo />
-                        <Counter />
-                        <Routing />
-                        <hr />
-                        <Search />
+                        <Counters />
                     </div>
                 </div>
             </div>
