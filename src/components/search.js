@@ -3,33 +3,38 @@ import React from "react";
 class Search extends React.Component{
 
     searchText = '';
+    state = {};
+    initState;
 
-    state = {
-        games: [
-            'Last of us',
-            'Detroid become human',
-            'Drive club',
-            'Horizon zero dawn',
-            'Spider man',
-            'Kilzone',
-            'Ghost og tusima',
-            'Witcher',
-            'Uncharted'
-        ]
+    constructor(props){
+        super(props);
+        this.initState = {
+            games: [
+                'Last of us',
+                'Detroid become human',
+                'Drive club',
+                'Horizon zero dawn',
+                'Spider man',
+                'Kilzone',
+                'Ghost og tusima',
+                'Witcher',
+                'Uncharted'
+            ]
+        }
+        this.state = this.initState;
     }
 
     search(e){
         let searchText = e.target.value;
         let searched = [];
-        this.state.games.map(function(value){
-            if(value.toLowerCase().indexOf(searchText) !== -1){
+        this.initState.games.map(function(value){
+            if(value.toLowerCase().indexOf(searchText.toLowerCase()) !== -1){
                 searched.push(value);
             }
         });
-        console.log(searched);
-        // this.setState({
-        //     games: searched
-        // })
+        this.setState({
+            games: searched
+        })
     }
 
     render(){
