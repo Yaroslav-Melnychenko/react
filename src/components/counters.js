@@ -14,12 +14,18 @@ class Counters extends React.Component{
     }
 
     handleDelete(counterid){
-        
+        const counters = this.state.counters.filter(c => c.id !== counterid);
+        this.setState({counters: counters});
+    }
+
+    handleReset(){
+        console.log('Reset');
     }
 
     render(){
         return (
             <div>
+            <button onClick={this.handleReset.bind(this)} className="btn btn-success b-3">Reset</button>
                 {
                     this.state.counters.map( counter =>
                         <Counter onDelete={this.handleDelete.bind(this, counter.id)} key={counter.id} value={counter.value} /> )
