@@ -8,7 +8,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import Todo from "./components/todo";
 // import Routing from "./components/routing";
 // import Search from "./components/search";
-import Counters from "./components/counters";
+//import Counters from "./components/counters";
+import Squere from "./components/squere";
 
 class App extends React.Component{
     render(){
@@ -16,7 +17,7 @@ class App extends React.Component{
             <div className="container mt-5">
                 <div className="row">
                     <div className="col-md-12">
-                        <Counters />
+                        <Squere />
                     </div>
                 </div>
             </div>
