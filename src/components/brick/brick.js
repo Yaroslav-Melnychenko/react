@@ -25,7 +25,7 @@ class Brick extends React.Component{
 
     render(){
         return(
-            <div onClick={this.changeStyle.bind(this)} style={this.state} className="block"></div>
+            <div onMouseDown={this.changeStyle.bind(this)} style={this.state} className="block"></div>
         );
     }
 }
