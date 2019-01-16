@@ -1,7 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Layout from "./components/lessons/layout";
+import Bricks from "./components/brick/bricks";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const Home = () => (
@@ -16,9 +17,9 @@ const About = () => (
     </div>
 )
 
-const Contacts = () => (
+const Play = () => (
     <div>
-        <h2>Contacts</h2>
+        <Bricks />
     </div>
 )
 
@@ -33,12 +34,12 @@ class App extends React.Component{
                             <ul>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/about">About</Link></li>
-                                <li><Link to="/contacts">Contacts</Link></li>
+                                <li><Link to="/play">Play</Link></li>
                             </ul>
                             <hr/>
                             <Route exact path="/" component={Home} />
                             <Route path="/about/" component={About} />
-                            <Route path="/contacts" component={Contacts} />
+                            <Route path="/play" component={Play} />
                         </div>
                     </BrowserRouter>
                     </div>
