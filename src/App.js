@@ -3,12 +3,14 @@ import React from "react";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Layout from "./components/lessons/layout";
 import Bricks from "./components/brick/bricks";
+import Counters from "./components/mosh/counters";
 import TaskManager from "./components/taskmanager/taskmanager";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const Home = () => (
     <div>
         <Layout />
+        <Counters />
     </div>
 )
 
