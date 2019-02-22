@@ -5,12 +5,14 @@ import Layout from "./components/lessons/layout";
 import Bricks from "./components/brick/bricks";
 import Counters from "./components/mosh/counters";
 import TaskManager from "./components/taskmanager/taskmanager";
+import PersonList from "./components/axios/axios";
+import PersonInput from "./components/axios/personInput";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const Home = () => (
     <div>
-        <Layout />
-        <Counters />
+        <PersonInput />
+        <PersonList />
     </div>
 )
 
